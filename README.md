@@ -35,3 +35,11 @@ analyze-css --file stylesheet.css > nameoffile.json
 ```
 uncss index.html article-1.html article-2.html > optimized.css
 ```
+####chapter4 Complex Layouts
+#####Managing the CSS Box Model
+Block-level boxes are rendered vertically according to their source order and (except for tables) expand to fill the available width.  
+inline elements:
+```
+inline, inline-block, inline-table, or ruby
+```
+
