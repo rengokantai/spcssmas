@@ -1,6 +1,6 @@
-### spcssmas
-####chapter3 Debugging and Optimization
-#####Debugging for UI Responsiveness
+## spcssmas
+###chapter3 Debugging and Optimization
+####Debugging for UI Responsiveness
 CSS properties and values that trigger reflows are particularly expensive. 
 ######What is a reflow?
 relow: change position, dimension  
@@ -11,7 +11,7 @@ compare left and transformX:
 In most browsers, transforms don’t trigger reflows, left operation trigger reflows.  
 [review css hacks](http://www.paulirish.com/2009/browser-specific-css-hacks/)
 
-#####Code-quality Tools
+####Code-quality Tools
 ######csslint
 ```
 csslint stylesheet.css > csslintoutput.txt
@@ -35,11 +35,18 @@ analyze-css --file stylesheet.css > nameoffile.json
 ```
 uncss index.html article-1.html article-2.html > optimized.css
 ```
-####chapter4 Complex Layouts
-#####Managing the CSS Box Model
+###chapter4 Complex Layouts
+####Managing the CSS Box Model
 Block-level boxes are rendered vertically according to their source order and (except for tables) expand to fill the available width.  
 inline elements:
 ```
 inline, inline-block, inline-table, or ruby
 ```
+
+####Managing Layers with position and z-index
+rules:
+- Child stacking contexts with a negative stack level (for example, positioned and z-index: -1)
+- Non-positioned elements
+- Child stacking contexts with a stack level of 0 (for example, positioned and z-index: auto)
+- Child stacking contexts with positive stack levels (for example, positioned and z-index: 1)  
 
